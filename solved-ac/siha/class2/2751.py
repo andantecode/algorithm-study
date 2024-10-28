@@ -7,3 +7,6 @@ numbers = [int(input()) for _ in range(N)]
 numbers.sort()
 for num in numbers:
     print(num)
+
+# 런타임 에러가 난다.. 아무래도 import sys를 써야할 거 같은데..
+# sys. 뭐더라..
