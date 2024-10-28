@@ -10,5 +10,3 @@ L.sort()
 L.sort(key=len) 
 
 print(L)
-
-    
