@@ -8,8 +8,8 @@ for i in range(num):
 
 
 words = list(set(words))
-words.sort(key = len)
 words.sort()
+words.sort(key = len)
 
 
 for word in words:
