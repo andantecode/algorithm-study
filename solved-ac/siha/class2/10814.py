@@ -5,7 +5,7 @@ P = [input().split() for _ in range(N)]
 # sort를 써서 나이를 기준으로 정렬
 # 나이, 이름으로 출력
 P = [(int(A),B) for A, B in P]
-P.sort(key=lambda )
+P.sort(key=lambda x : x[0] )
 
 for A, B in P:
     print(A, B)
