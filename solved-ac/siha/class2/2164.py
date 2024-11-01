@@ -6,13 +6,14 @@
 # 다시 pop을 써서 맨 위 카드를 찾아서 리스트에 추가 (맨 아래에)
 
 import sys
+from collections import deque
 
 N = int(sys.stdin.readline().strip())
 
-cards = list(range(1, N+1))
+cards = deque(range(1, N + 1))
 
 while len (cards) > 1:
-    cards.pop(0)
-    cards.append(cards.pop(0))
+    cards.popleft()
+    cards.append(cards.popleft())
 
 print(cards[0])
