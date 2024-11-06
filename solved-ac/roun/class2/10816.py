@@ -2,9 +2,11 @@
 # silver 4 #
 ############
 
+import sys
+
 num = int(input())
 
-my_card = list(map(int, input().split()))
+my_card = list(map(int, sys.stdin.readline().rstrip().split()))
 
 # dict을 활용해 hash key로 탐색을 빠르게
 card_dict = {}
@@ -19,7 +21,7 @@ for card in my_card:
 
 target_num = int(input())
 
-target_card = list(map(int, input().split()))
+target_card = list(map(int, sys.stdin.readline().rstrip().split()))
 
 for target in target_card:
     # dict에 존재하는 key면 그 count를 출력
@@ -31,5 +33,5 @@ for target in target_card:
 
 ####################
 # memory: 137516KB #
-# time:   868ms    #
+# time:   808ms    #
 ####################
