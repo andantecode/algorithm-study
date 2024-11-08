@@ -47,7 +47,7 @@ my_card = list(map(int, sys.stdin.readline().rstrip().split()))
 # Counter 자료 구조 가져오기
 counter = Counter()
 
-# list를 넣고 update하면, 각 요소는 key, 그게 몇개인지 value로 만들어짐
+#list를 넣고 update하면, 각 요소는 key, 그게 몇개인지 value로 만들어짐
 counter.update(my_card)
 
 target_num = int(sys.stdin.readline().rstrip())
