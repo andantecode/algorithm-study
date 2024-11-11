@@ -2,8 +2,10 @@
 # silver 3 #
 ############
 
+# verson 1
+# target의 제곱근까지만 나누어지는지 확인
+# 예를 들어, 121같은 경우 11까지만 탐색해도 괜찮으니까 [1, 11, 121]
 _min, _max = list(map(int, (input().split())))
-output = ''
 
 for i in range(_min, _max+1):
     count = 0
@@ -16,12 +18,15 @@ for i in range(_min, _max+1):
             count = 1
             break
 
-    if count == 1:
-        output += f'{i}\n'
+    if count == 0:
+        print(i)
 
-    
-print(output)
 
-################
-#              #
-################
+
+###################
+# memory: 31120KB #
+# time:   5024ms  #
+###################
+
+# version 2
+
