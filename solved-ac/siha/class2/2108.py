@@ -13,6 +13,7 @@ median = num[N//2]
 # 최빈값 : N개의 수들 중 가장 많이 나타나는 값 (여러 개 있을 때에는 최빈값 중 두 번째로 작은 값을 출력한다.)
 count = Counter(num)
 modes = count.most_common()
+modes = [k for k, v in count.items() if v == max(count.values())]
 # 최빈값 후보 리스트 받아서 정렬하고 여러 최빈값이면 두번째 / 하나면 그 값..
 modes.sort()
 if len(modes) > 1:
