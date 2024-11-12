@@ -16,8 +16,7 @@ if n == 0:
     print(0)
 else:
     rank.sort()
-    count = round(n*0.15)
+    count = int(n * 0.15 + 0.5)
     del_rank = rank[count : n-count]
-    mean = round(sum(del_rank) / len(del_rank)) 
+    mean = int(sum(del_rank) / len(del_rank) + 0.5) 
     print(mean)
-
