@@ -1,3 +1,7 @@
+# 집합 이용! -> 듣도 못한 사람 / 보도 못한 사람 각각 집합
+# 두 집합의 교집합 구하기 (sorted로 사전순 정렬)
+# 프린트 듣보잡 수 / 명단
+
 import sys
 input = sys.stdin.read
 data = input().splitlines()
