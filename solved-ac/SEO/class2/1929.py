@@ -15,4 +15,4 @@ for num in range(M, N+1):
     if prime:
         print(num)
 
-# 1은 소수가 아니였다...!뜨든
+# 1은 소수가 아니였다
