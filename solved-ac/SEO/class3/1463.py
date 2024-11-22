@@ -17,5 +17,11 @@ for i in range(2, X + 1):
 print(dp[X])
 
 # if X == 10
+# dp[2] = 1
+# dp[3] = 1
+# dp[4] = dp[3] + 1
+# dp[4] = min(dp[4], dp[2] + 1)
+# dp[5] = dp[4] + 1
+
 # dp[10] = dp[9] + 1
-# dp[10] ==        
+# dp[10] = min(dp[10], dp[5] + 1)        
