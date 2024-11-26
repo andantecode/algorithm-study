@@ -18,7 +18,7 @@ for i in range(4, 11):
 # 테스트 케이스 개수
 Test = int(input())
 
-# n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력
+# n을 1, 2, 3의 합으로 나타내기
 for _ in range(Test):
     n = int(input())
     print(dp[n])
