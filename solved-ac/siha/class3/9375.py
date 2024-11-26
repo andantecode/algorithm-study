@@ -4,7 +4,6 @@
 # result = (2+1) * (1+1) - 1 = 5
 
 
-
 import sys
 input = sys.stdin.readline
 
