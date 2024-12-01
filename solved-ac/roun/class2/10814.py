@@ -9,21 +9,27 @@ num = int(input())
 
 for i in range(num):
     # 각각의 정보는 dict으로 처리
-    person = {}
+    person = []
     age, name = list(input().split(' '))
     
     # 기입된 순서에 대한 정보를 유지하기 위해 id field 추가
-    person['age'] = int(age)
-    person['name'] = name
-    person['id'] = i
+    person.append(int(age))
+    person.append(name)
+    person.append(i)
 
     people.append(person)
 
 # age로 정렬, 후순서로 id로 정렬
 people.sort(key= lambda x: (x['age'], x['id']))
 
+
 for person in people:
     print(person['age'], person['name'])
+
+
+
+print(people)
+
 
 
 ###################

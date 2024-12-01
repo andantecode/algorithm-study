@@ -12,10 +12,10 @@ for index in range(2, num + 1):
     list_.append(list_[index - 1] * index)
 
 # target을 문자열로 바꿈
-target = str(list_[num])
+target = str(list_[num]) # n! = '382400' 
 
 # target을 reverse
-target = list(reversed(target))
+target = list(reversed(target)) # '002483' -> ['0', '0', '2', '4', '8', '3']
 
 count = 0
 
@@ -32,3 +32,8 @@ print(count)
 # memory: 31120KB #
 # time:   40ms    #
 ###################
+
+
+# 3! = 3 x 2!
+# 2! = 2 x 1
+
