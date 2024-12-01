@@ -14,7 +14,7 @@ inputs = []
 for i in range(num):
     inputs.append(int(sys.stdin.readline().rstrip()))
 
-# 8까지는 규칙이 크게 없고, 9부터는 아래 조건이 성립
+# 6까지는 규칙이 크게 없고, 7부터는 아래 조건이 성립
 for i in range(11, max(inputs) + 1):
     dp[i] = dp[i-1] + dp[i-5]
 

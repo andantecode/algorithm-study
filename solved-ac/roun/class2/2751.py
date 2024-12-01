@@ -10,7 +10,7 @@ MAX_NUM = 1000000
 num = int(input())
 
 # 0부터 MAX_NUM까지는 plus에 저장 (각 index), -MAX_NUM부터 -1까지는 minus에 저장
-plus = [0] * (MAX_NUM + 1)
+plus = [0] * (MAX_NUM + 1) 
 minus = [0] * (MAX_NUM + 1)
 
 # 입력된 숫자의 해당 인덱스 값을 0에서 1로 변경
@@ -21,6 +21,8 @@ for i in range(num):
         plus[tmp] += 1
     else:
         minus[-tmp] += 1
+
+# MAX_NUM * MAX_NUM -> MAX_NUM + MAX_NUM
 
 # minus list에서 MAX_NUM부터 탐색하여 값이 1이면, 출력
 for i in range(MAX_NUM, 0, -1):

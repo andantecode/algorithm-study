@@ -39,8 +39,8 @@ command_num = int(sys.stdin.readline().rstrip())
 queue = deque()
 
 for i in range(command_num):
-    command_line = list(sys.stdin.readline().rstrip().split())
-    # command_line을 unboxing해서 넘겨줌
+    command_line = list(sys.stdin.readline().rstrip().split()) # ['push', '11']
+    # command_line을 unpacking해서 넘겨줌
     do_command(queue, *command_line)
 
 ###################
