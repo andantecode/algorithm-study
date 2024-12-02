@@ -30,6 +30,13 @@
         <sub><b>이시하</b></sub><br />
       </a>
     </td>
+        <td align="center">
+      <a href="https://github.com/ruka030809">
+        <img src="https://avatars.githubusercontent.com/u/121449793?v=4" width="120px" height="120px" alt=""/>
+        <hr />
+        <sub><b>김형준</b></sub><br />
+      </a>
+    </td>
   </tr>
 </table>
 </div>
