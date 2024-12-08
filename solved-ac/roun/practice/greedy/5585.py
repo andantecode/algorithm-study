@@ -20,3 +20,8 @@ for i, item in enumerate(items):
     num -= result[i] * item
 
 print(sum(result))
+
+###################
+# memory: 32412KB #
+# time:   36ms    #
+###################
