@@ -9,16 +9,16 @@ input = sys.stdin.readline
 
 def bfs(graph: dict, start: int):
     visited = set([start])
-    queue = deque([(start, 0)])
+    queue = deque([(start, 0)]) 
     kevin = 0
 
     while queue:
-        curr, depth = queue.popleft()
+        curr, depth = queue.popleft() 
         kevin += depth
 
         for target in list(graph[curr]):
             if target not in visited:
-                queue.append((target, depth + 1))
+                queue.append((target, depth + 1)) 
                 visited.add(target)
     return kevin
 
