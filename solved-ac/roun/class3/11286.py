@@ -9,25 +9,32 @@ input = sys.stdin.readline
 
 num = int(input())
 
-minus_heap = []
-plus_heap = []
+abs_heap = []
 
 for i in range(num):
     temp = int(input())
 
     if temp > 0:
-        heapq.heappush(plus_heap, temp)
+        heapq.heappush(abs_heap, (temp, 1))
     elif temp < 0:
-        heapq.heappush(minus_heap, -temp)
+        heapq.heappush(abs_heap, (-temp, -1))
     else:
-        if not minus_heap and not plus_heap:
-            print(0)
-        elif not minus_heap:
-            print(heapq.heappop(plus_heap))
-        elif not plus_heap:
-            print(heapq.heappop(minus_heap))
+        if abs_heap:
+            target = heapq.heappop(abs_heap)
         else:
-            if minus_heap[0] <= plus_heap[0]:
-                print(-heapq.heappop(minus_heap))
-            else:
-                print(heapq.heappop(plus_heap))
+            target = (0, 1)
+
+        if target[1] > 0:
+            # print(f"ans: {target[0]}")
+            print(target[0])
+        else:
+            # print(f"ans: {-target[0]}")
+            print(-target[0])
+
+###################
+# memory: 41120KB #
+# time:   132ms   #
+###################
+
+# 절댓값 힙: 튜플 형태로 넣고 음수라면, -해서 넣되 음수라는 flag를 함께 넣음
+# 꺼내서 출력할 때, flag가 음수라면, -해서 출력하는 방식
