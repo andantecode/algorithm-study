@@ -6,7 +6,6 @@ import sys
 from collections import deque
 
 def bfs(graph: list):
-    visited = set()
     queue = deque()
     time = 0
     count = 0
@@ -17,7 +16,6 @@ def bfs(graph: list):
         for r in range(len(graph[0])):
             for c in range(len(graph[0][0])):
                 if graph[h][r][c] == 1:
-                    visited.add((h, r, c))
                     queue.append((h, r, c, 0))
                 elif graph[h][r][c] == 0:
                     count += 1
@@ -43,10 +41,7 @@ def bfs(graph: list):
                 0 <= next_c < len(graph[0][0]):
 
                 # 익지 않은 토마토가 있는 위치이고 방문하지 않은 곳인지 검사
-                if graph[next_h][next_r][next_c] == 0 and \
-                    (next_h, next_r, next_c) not in visited:
-
-                    visited.add((next_h, next_r, next_c))
+                if graph[next_h][next_r][next_c] == 0:
                     queue.append((next_h, next_r, next_c, time + 1))
                     graph[next_h][next_r][next_c] = 1
                     count -= 1
@@ -73,6 +68,6 @@ for h in range(height):
 print(bfs(graph))
 
 ####################
-# memory: 143636KB #
-# time:   2304ms   #
+# memory: 51404KB  #
+# time:   1736ms   #
 ####################
