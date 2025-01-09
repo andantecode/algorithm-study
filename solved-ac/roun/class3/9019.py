@@ -34,10 +34,12 @@ def bfs(init: int, target: int) -> str:
         curr, command = queue.popleft()
 
         if curr == target:
-            return command
+            return command # "DDSL"
 
         for name in ["D", "S", "L", "R"]:
             next_value = funcs[name](curr)
+            # -> next_value = D(curr)
+            # -> next_value = S(curr)
 
             if not visited[next_value]:
                 visited[next_value] = True

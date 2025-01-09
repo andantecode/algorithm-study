@@ -20,6 +20,7 @@ def clean(heap: list, is_max_heap: bool = True):
 
         heapq.heappop(heap)
 
+
 def do_command(command: str, value: int):
     global min_heap, max_heap, sync
 
