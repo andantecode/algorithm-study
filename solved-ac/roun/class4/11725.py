@@ -38,3 +38,8 @@ result = solve(graph)
 
 for key in sorted(result.keys()):
     print(result[key])
+
+###################
+# memory: 86840KB #
+# time:   468ms   #
+###################
